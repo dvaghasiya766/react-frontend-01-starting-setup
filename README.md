@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 '/:uid/place'   => List of Places for Selected Users    => Always Reachable \
 '/authenticate' => SignUp + LogIn Froms                 => Only unAuthonticated \
 '/place/new'    => New Place Form                       => Only Authonticated \
-'/place/:pid'   => Update Place Form                    => Only Authonticated \
+'/place/:pid'   => Update Place Form                    => Only Authonticated
 
 ## Available Scripts
 
