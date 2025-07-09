@@ -4,11 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 <!-- ## Here Whole Project APIs (SPA Pages) -->
 ## In this Project: React APIs  (SPA Pages)
-'/'             => List of Users                        => Always Reachable
-'/:uid/place'   => List of Places for Selected Users    => Always Reachable
-'/authenticate' => SignUp + LogIn Froms                 => Only unAuthonticated
-'/place/new'    => New Place Form                       => Only Authonticated
-'/place/:pid'   => Update Place Form                    => Only Authonticated
+'/'             => List of Users                        => Always Reachable \
+'/:uid/place'   => List of Places for Selected Users    => Always Reachable \
+'/authenticate' => SignUp + LogIn Froms                 => Only unAuthonticated \
+'/place/new'    => New Place Form                       => Only Authonticated \
+'/place/:pid'   => Update Place Form                    => Only Authonticated \
 
 ## Available Scripts
 
