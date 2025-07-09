@@ -1,12 +1,17 @@
 import React from "react";
+import UsersList from "../Components/UsersList";
 
 const Users = () => {
-  return (
-    <div>
-      <h1>Users Page</h1>
-      <p>This is the users page.</p>
-    </div>
-  );
+  const USERS = [
+    {
+      id: "u1",
+      name: "Max Schwarz",
+      image:
+        "https://tse3.mm.bing.net/th/id/OIP.EwG6x9w6RngqsKrPJYxULAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      places: 3,
+    },
+  ];
+  return <UsersList items={USERS} />;
 };
 export default Users;
 // This component is a simple functional component that renders a heading and a paragraph.
