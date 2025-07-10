@@ -1,20 +1,17 @@
 import React from "react";
 
 import Input from "../../shared/components/FormElements/Input";
-// import Button from "../../shared/components/FormElements/Button";
+import { VALIDATOR_REQUIRE } from "../../shared/util/validators";
 import "./NewPlace.css";
 
 const NewPlace = () => {
   return (
     <form className="place-form">
       <Input
-        // id="title"
         element="input"
         type="text"
         label="Title"
-        // placeholder="Title"
-        // validators={[]}
-        // onInput={() => {}}
+        validators={[VALIDATOR_REQUIRE()]}
         errorText="Please enter a valid title."
       />
       {/* <Input

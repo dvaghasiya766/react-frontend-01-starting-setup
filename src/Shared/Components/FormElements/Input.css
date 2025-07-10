@@ -33,7 +33,10 @@
 .form-control--invalid p {
   color: red;
 }
-
+.form-control--invalid input::placeholder,
+.form-control--invalid textarea::placeholder {
+  color: rgb(255, 110, 110);
+}
 .form-control--invalid input,
 .form-control--invalid textarea {
   border-color: red;
