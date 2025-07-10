@@ -365,3 +365,5 @@ if (!args['--name']) throw new Error('missing required argument: --name');
 # License
 
 Released under the [MIT License](LICENSE.md).
+
+![alt text](image.png)
