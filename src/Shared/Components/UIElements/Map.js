@@ -1,28 +1,42 @@
-import React, { useRef, useEffect } from 'react';
+// src/components/UIElements/Map.jsx
+import React, { useRef, useEffect } from "react";
+import "ol/ol.css";
+import { Map, View } from "ol";
+import TileLayer from "ol/layer/Tile";
+import OSM from "ol/source/OSM";
+import { fromLonLat } from "ol/proj";
 
-import './Map.css';
-
-const Map = props => {
+const MapComponent = ({ center, zoom }) => {
   const mapRef = useRef();
-  
-  const { center, zoom } = props;
 
   useEffect(() => {
-    const map = new window.google.maps.Map(mapRef.current, {
-      center: center,
-      zoom: zoom
+    const map = new Map({
+      target: mapRef.current,
+      layers: [
+        new TileLayer({
+          source: new OSM(),
+        }),
+      ],
+      view: new View({
+        center: fromLonLat([center.lng, center.lat]), // Convert to map projection
+        zoom: zoom,
+      }),
     });
-  
-    new window.google.maps.Marker({ position: center, map: map });
-  }, [center, zoom]);  
+
+    return () => map.setTarget(null);
+  }, [center, zoom]);
 
   return (
     <div
       ref={mapRef}
-      className={`map ${props.className}`}
-      style={props.style}
+      style={{
+        width: "100%",
+        height: "200px",
+        borderRadius: "8px",
+        overflow: "hidden",
+      }}
     ></div>
   );
 };
 
-export default Map;
+export default MapComponent;
