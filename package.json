@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "dotenv": "^17.2.0",
     "formik": "^2.4.6",
     "ol": "^10.6.1",
     "react": "^16.11.0",
