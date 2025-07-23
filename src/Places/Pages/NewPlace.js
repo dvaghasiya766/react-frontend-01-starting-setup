@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useHistory } from "react-router-dom";
 
 import Input from "../../shared/components/FormElements/Input";
 import Button from "../../shared/components/FormElements/Button";
@@ -35,6 +36,7 @@ const NewPlace = () => {
     },
     false
   );
+  const history = useHistory();
 
   const placeSubmitHandler = async (event) => {
     event.preventDefault();
@@ -50,7 +52,7 @@ const NewPlace = () => {
         }),
         { "Content-Type": "application/json" }
       );
-      // history.push("/");
+      history.push("/");
     } catch (err) {}
   };
 
@@ -58,7 +60,7 @@ const NewPlace = () => {
     <React.Fragment>
       <ErrorModal error={error} onClear={clearError} />
       <form className="place-form" onSubmit={placeSubmitHandler}>
-        {isLoading && <LoadingSpinner asOverLay />}
+        {isLoading && <LoadingSpinner asOverlay />}
         <Input
           id="title"
           element="input"
